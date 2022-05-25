@@ -1,6 +1,6 @@
 # p2-amplifire-frontend
 
-## Members:
+## Group Members
 - Harsh Tamakuwala
 - Marcos Fonseca
 - Gabriel Garcia

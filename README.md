@@ -49,6 +49,6 @@
 - Wine Recommendation
 - Search Food Videos
 - Random Food Joke , Random Food Trivia
-- save recipes
+- save recipes.
 
 

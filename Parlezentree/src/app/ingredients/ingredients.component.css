@@ -1,20 +1,32 @@
 .ingredients-card{
     background-color: rgb(108,203,241);
-    height: 150px;
+    height: 200px;
 }
 #form-id{
     display: flex;
     justify-content: center;
 }
+h2{
+  padding-top: 20px;
+ 
+  width: 100%;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
 #ingredients-text{
     width: 50%;
-  border: none;
-    margin-top: 60px;
+    border: none;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
     border-radius : 10px;
     height:50px;
     padding-left: 10px;
+    padding-right: 10px;
     outline: none;
-    
+    cursor: pointer;
    color: rgb(43, 100, 131);
 }
 
@@ -26,7 +38,7 @@
 .recipe-class{
     margin-left: auto;
     margin-right: auto;
-    width:80%; 
+    width:90%; 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

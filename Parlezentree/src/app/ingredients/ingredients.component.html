@@ -1,25 +1,28 @@
-<div class="ingredients-card" >
+<div class="ingredients-card">
     <h2>Give Us Ingredients, We'll Give You A Recipe.</h2>
-    <form  id="form-id">
-        <input id="ingredients-text" type="search" name="ingrediants" placeholder="Ingrediants" required [(ngModel)] = "ingrediants" (keyup.enter)="search()" />
+    <form id="form-id">
+        <input id="ingredients-text" type="search" name="ingrediants" placeholder="Ingrediants" required
+            [(ngModel)]="ingrediants" (keyup.enter)="search()" />
     </form>
 </div>
-<div >
+<div>
     <div class="recipe-class">
         <div class="recipe-class">
-            <div class="recipe-card"  *ngFor = "let recipe of (ingrediantsRecipe | async ) " >
-               
+            <div class="recipe-card" *ngFor="let recipe of (ingrediantsRecipe | async ) ">
+
                 <img id="recipe-image" src={{recipe.image}}>
                 <h6 id="recipe-title">{{recipe.title}}</h6>
-                <div id="recipe-like-div"> 
-                <h6 class="recipe-like" >likes : </h6>
-                <h6 class="recipe-like">{{recipe.likes}}</h6>
+                <div id="recipe-like-div">
+                    <h6 class="recipe-like">likes : </h6>
+                    <h6 class="recipe-like">{{recipe.likes}}</h6>
                 </div>
                 <div id="recipe-missingredients-div">
-                <h6 class="recipe-missingredients" *ngIf="recipe.missedIngredientCount !=0 ">Missed Ingrediants : </h6>
-                <div  *ngFor = "let missedIngredient of recipe.missedIngredients " >
-                <h6 class="recipe-missingredients"> {{missedIngredient.name}}, </h6></div>
+                    <h6 class="recipe-missingredients" *ngIf="recipe.missedIngredientCount !=0 ">Missed Ingrediants :
+                    </h6>
+                    <div *ngFor="let missedIngredient of recipe.missedIngredients ">
+                        <h6 class="recipe-missingredients"> {{missedIngredient.name}}, </h6>
+                    </div>
                 </div>
-            </div>     
-</div>
-</div>
+            </div>
+        </div>
+    </div>

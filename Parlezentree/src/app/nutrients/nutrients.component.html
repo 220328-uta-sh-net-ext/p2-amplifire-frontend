@@ -1,0 +1,47 @@
+<div class="nutrient-card">
+    <h2>Nutrients</h2>
+    <form id="form-id">
+        <div class="input-container">
+            <div class="first-row">
+                <label class="nutrient-label" for="calories">Calories (between 50 and 800):&nbsp;&nbsp;</label>
+                <input type="number" class="input" id="calories" name="calories" min="50" max="800" [(ngModel)] = "calories"/>
+
+                <label class="nutrient-label" for="protein">Protein (between 10 and 100):&nbsp;&nbsp;</label>
+                <input type="number" class="input" id="protein" name="protein" min="10" max="100" [(ngModel)] = "protein"/>
+            </div>
+            
+            <div class="second-row">
+                <label class="nutrient-label" for="carbohydrate">Carbohydrate (between 10 and 100):&nbsp;&nbsp;&nbsp;</label>
+                <input type="number" class="input" id="carbohydrate" name="carbohydrate" min="10" max="100" [(ngModel)] = "carbohydrate"/>
+
+                <label class="nutrient-label" sfor="fat">Fat (between 1 and 100):&nbsp;&nbsp;</label>
+                <input type="number" class="input" id="fat" name="fat" min="1" max="100" [(ngModel)] = "fat"/>
+
+            </div>
+        </div>
+       
+    </form>
+    <button class="btn" (click)="onSearch()" >Search</button> 
+</div>
+<div class="recipe-class">
+    <div class="recipe-class">
+        <div class="recipe-card"  *ngFor="let recipe of (nutrientRec | async ) " >
+            <img id="recipe-image" src="{{recipe.image}}">
+            <h6 id="recipe-title">{{recipe.title}}</h6>
+            <div id="recipe-like-div"> 
+            <h6 class="recipe-like" >calories : </h6>
+            <h6 class="recipe-like">{{recipe.calories}}</h6>
+            </div>
+            <div id="recipe-missingredients-div">
+            <h6 class="recipe-missingredients" >protein : </h6>
+            <h6 class="recipe-missingredients"> {{recipe.protein}} </h6>
+            </div>   
+            <div id="recipe-missingredients-div">
+                <h6 class="recipe-missingredients" >fat : </h6>
+                <h6 class="recipe-missingredients"> {{recipe.fat}} </h6>
+            </div> 
+            <div id="recipe-missingredients-div">
+                <h6 class="recipe-missingredients" >carbs : </h6>
+                <h6 class="recipe-missingredients">{{recipe.carbs}} </h6>
+            </div>       
+</div>

@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   contanctNo:number=0;
   userPassword:string="";
   stng:any=[];
+  
 userDetails:Observable<any[]> = new Observable<any[]>();
 
 
@@ -26,7 +27,7 @@ onSubmit(): void{
    
   this.userId=Number(localStorage.getItem("userId"));
   this.userPassword=String(localStorage.getItem("userPass"));
- 
+  
     const user= {
       userid:this.userId,
       firstName:this.firstName,
@@ -57,7 +58,7 @@ onSubmit(): void{
   constructor(private nav:NavbarService,private updateUser:UpdateuserService) { }
 
   ngOnInit(): void {
-    
+     
      var id=Number(localStorage.getItem("userId"));
     
     this.nav.show();

@@ -11,6 +11,9 @@ import { JokeComponent } from './joke/joke.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NutrientsComponent } from './nutrients/nutrients.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';

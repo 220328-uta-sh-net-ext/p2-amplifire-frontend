@@ -1,0 +1,102 @@
+.joke
+{
+    height: 75px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 75px;
+    color: rgb(43, 100, 131);
+}
+
+.trivia
+{
+
+    height: 75px;
+    display: flex;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+    color: rgb(43, 100, 131);
+}
+
+.joke-message
+{
+    display: flex;
+    padding: 50px;
+    font-size: 40px;
+    background-color: #6CCBF1;
+    margin-left: 150px;
+    margin-right: 100px;
+    width: 80%;
+    color: white;
+}
+
+.trivia-message
+{
+    display: flex;
+    padding: 50px;
+    font-size: 40px;
+    background-color: #6CCBF1;
+    margin-left: 150px;
+    margin-right: 100px;
+    width: 80%;
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+
+
+/*
+.joke-button
+{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-right: 500px;
+    background-image: rgb(108,203,241);
+    box-shadow: white 2px 2px 2px 2px;
+    border: 2px solid rgb(108,203,241);
+}
+
+.joke-button:hover
+{
+    background: rgb(108,203,241);
+}
+
+.joke-button:active
+{
+    background: rgb(43, 100, 131);
+}
+
+.trivia-button
+{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-right: 500px;
+    background-image: rgb(108,203,241);
+    box-shadow: white 2px 2px 2px 2px;
+    border: 2px solid rgb(108,203,241);
+}
+
+.trivia-button:hover
+{
+    background: rgb(108,203,241);
+}
+
+.trivia-button:active
+{
+    background: rgb(43, 100, 131);
+}
+*/

@@ -10,6 +10,7 @@ import { NutrientsService } from '../nutrients.service';
 })
 export class NutrientsComponent implements OnInit {
 
+
   calories: string = "1000";
   protein: string = "100";
   carbohydrate: string = "100";

@@ -1,23 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(43, 100, 131)" *ngIf="nav.visible">
   <a class="navbar-brand" routerLink="home"><img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="50" width="50"> Parlez Entrée</a>
-    <div id="navbarNavDropdown" style="position:absolute; right: 20px;">
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
+    <div id="navbarNavDropdown" style="position:absolute; right: 80px;">
+    <ul class="navbar-nav" >
+      <li class="nav-item dropdown" >
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
           Service
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
           <a class="dropdown-item" routerLink="ingredients">Search by Ingredients</a>
+          <a class="dropdown-item" routerLink="nutrients">Search by Nutrients</a>
           <a class="dropdown-item" routerLink="joke">Jokes and Trivia</a>
           </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
-          Profile
+          Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="profile">My Account</a>
-          <a class="dropdown-item" routerLink="login">Log out</a>
+          <a class="dropdown-item" routerLink="profile">Edit Profile</a>
+          <a class="dropdown-item" (click)="onLogOut()" >Log out</a>
         </div>
       </li>
     </ul>

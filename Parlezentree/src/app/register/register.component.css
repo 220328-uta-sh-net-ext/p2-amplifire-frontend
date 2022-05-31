@@ -1,0 +1,52 @@
+#main-register-box {
+    background-color: rgb(43, 100, 131);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    padding-top: 2%;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+   
+}
+
+.input-div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.input-feild{
+    border-radius: 2px;
+    padding-left: 5px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+
+#button {
+    width: 300px;
+    border: none;
+    background-color: rgb(189, 227, 241);
+    border-radius: 5px;
+    margin-top: 10%;
+    padding-top: 10px;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 10px;
+   color: rgb(43, 100, 131);
+}
+
+#link {
+    color: rgb(128, 233, 247);
+}
+
+#not-regi{
+    margin-top: 10px;
+}

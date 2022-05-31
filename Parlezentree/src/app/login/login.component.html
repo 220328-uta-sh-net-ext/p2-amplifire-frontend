@@ -1,1 +1,23 @@
-<p>login works!</p>
+<!-- <a class="navbar-brand" routerLink="home"><img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="50">Parlez Entrée</a> -->
+
+<div id="main-login-box">
+    <img  src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="110" style="margin-bottom: 10px">
+    <h1>Parlez Entrée</h1>
+    <form id="login" (ngSubmit)="onSubmit()">
+        <div class="input-div">
+            <input class="input-feild" id="username" name="username" type="text" placeholder="Email Id" required [(ngModel)]="userEmail">
+            <!--  -->
+        </div>
+        <div class="input-div">
+            <input class="input-feild" id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="password">
+            <!--  -->
+        </div>
+        <input id="button" type="submit" value="Login" />
+
+    </form>
+    <div id="not-regi">
+    <h6> Not registered? <a id="link" (click)="navigateRegister()">Create a new account</a></h6>
+</div>
+<div id="error">
+<h6 *ngIf='error'> Invalid emailid or password</h6></div>
+</div>

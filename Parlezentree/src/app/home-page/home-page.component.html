@@ -1,9 +1,28 @@
-<div class = "home-page">
-    <div class = "home-message">
-        <!-- Only Placeholder for home page -->
-        <h1> Amplifire Project 2</h1>
-        <img src = "https://i.postimg.cc/jj4Bzdh1/chefmain.png" height="400" width="400">
-        <p><strong>MEMBERS:</strong></p>
-        <p>Harsh Tamakuwala - Marcos Fonseca - Gabriel Garcia - Jamaal Fisher</p>
-    </div>
+<div class="recipies-card">
+    <form id="form-id">
+        <input id="recipies-text" type="search" name="recipes" placeholder="Search for Recipe" required
+            [(ngModel)]="inputtyped" (keyup.enter)="search()" />
+    </form>
 </div>
+    <div>
+        <div class="recipe-class">
+            <h1 *ngIf="detailscount == 0">Recipe Not found! Please try something else.</h1>
+            <div *ngFor="let r of details">
+
+                <div class="recipe-card">
+                    <img id="recipe-image" src="{{r.image}}" />
+                    <h5 id="recipe-title">{{r.title}}</h5>
+                    <div id="recipe-readyMin-div">
+                        <h6 class="recipe-readyMin"> Ready in: {{r.readyMin}}</h6>
+                    </div>
+                    <div id="recipe-healthScore-div">
+                        <h6 class="recipe-healthScore"> Health Score: {{r.healthScore}}</h6>
+                    </div>
+
+                    <div id="recipe-link-div">
+                        <a href="{{r.link}} " target="_blank" class="recipe-link" font color="#000000">See Details > </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,8 +1,9 @@
 <div class="recipies-card">
     <form id="form-id">
-        <input id="recipies-text" type="text" name="recipes" placeholder="Search for Recipe" required
+        <input id="recipies-text" type="search" name="recipes" placeholder="Search for Recipe" required
             [(ngModel)]="inputtyped" (keyup.enter)="search()" />
     </form>
+</div>
     <div>
         <div class="recipe-class">
             <h1 *ngIf="detailscount == 0">Recipe Not found! Please try something else.</h1>
@@ -19,10 +20,9 @@
                     </div>
 
                     <div id="recipe-link-div">
-                        <a href="{{r.link}} " class="recipe-link" font color="#000000">See Details > </a>
+                        <a href="{{r.link}} " target="_blank" class="recipe-link" font color="#000000">See Details > </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

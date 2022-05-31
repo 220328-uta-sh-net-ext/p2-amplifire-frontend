@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit , Output} from '@angular/core';
+import { Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
 
 
@@ -19,7 +20,7 @@ export class ProfileComponent implements OnInit {
   contanctNo:number=0;
   userPassword:string="";
   stng:any=[];
-  
+  isLogin: string = "false";
 userDetails:Observable<any[]> = new Observable<any[]>();
 
 
@@ -55,7 +56,7 @@ onSubmit(): void{
     });
     
     }
-  constructor(private nav:NavbarService,private updateUser:UpdateuserService) { }
+  constructor(private nav:NavbarService,private updateUser:UpdateuserService,private router:Router ) { }
 
   ngOnInit(): void {
      
@@ -76,6 +77,14 @@ onSubmit(): void{
     localStorage.setItem("userId",this.stng[0]);
     localStorage.setItem("userPass",this.stng[5]);
     });
+
+    this.isLogin=localStorage.getItem("isLogin") || "false";
+   
+    if(this.isLogin == "true"){
+      this.router.navigate(['home']);
+    }else{
+      this.router.navigate(['login']);
+    }
 
   }
 

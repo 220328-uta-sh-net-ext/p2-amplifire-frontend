@@ -4,6 +4,7 @@ import { NavbarService } from '../navbar.service';
 import { Observable } from 'rxjs';
 import { RandomrecipeService } from '../randomrecipe.service';
 import { IRecipe } from '../IRecipe';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,23 +13,15 @@ import { IRecipe } from '../IRecipe';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  
-  inputtyped:string = "";
+
+  inputtyped: string = "";
   RRecipies: Observable<any[]> = new Observable<any[]>();
   stng: any = [];
   details: Array<{ title: string, image: string, link: string, healthScore: string, readyMin: string }> = [];
-  detailscount:number = 0;
-  list: IRecipe = {
-    id: 0,
-    title: "",
-    calories: 0,
-    carbs: 0,
-    fat: 0,
-    image: "",
-    imageType: "",
-    protein: 0
-  };
-  constructor(private nav: NavbarService, private RandomrecipeService: RandomrecipeService) { }
+  detailscount: number = 0;
+  isLogin: string = "false";
+
+  constructor(private nav: NavbarService, private RandomrecipeService: RandomrecipeService, private router: Router) { }
 
   search(): void {
     this.RandomrecipeService.getSearchRecipe(this.inputtyped);
@@ -50,7 +43,7 @@ export class HomePageComponent implements OnInit {
     });
 
   }
-  
+
 
   ngOnInit(): void {
     this.nav.show();
@@ -70,5 +63,12 @@ export class HomePageComponent implements OnInit {
       this.detailscount = this.details.length;
       console.log(this.details);
     });
+    this.isLogin = localStorage.getItem("isLogin") || "false";
+    
+    if (this.isLogin == "true") {
+      this.router.navigate(['home']);
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 }

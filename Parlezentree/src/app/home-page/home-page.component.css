@@ -1,6 +1,6 @@
 .recipies-card{
     background-color: rgb(108,203,241);
-    height: 150px;
+    height: 200px;
 }
 #form-id{
     display: flex;
@@ -14,6 +14,7 @@
     border-radius : 10px;
     height:50px;
     padding-left: 10px;
+    padding-right: 10px;
     outline: none;    
     color: rgb(43, 100, 131);
    
@@ -25,6 +26,7 @@
   }
 
 .recipe-class{
+  margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width:1200px; 

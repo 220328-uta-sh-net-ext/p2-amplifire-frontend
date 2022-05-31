@@ -1,19 +1,22 @@
 <!-- <a class="navbar-brand" routerLink="home"><img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="50">Parlez Entrée</a> -->
-<h3 *ngIf='error'> UserEmail or Password Incorrect</h3>
+
 <div id="main-login-box">
-    <img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="150">
+    <img  src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="130" style="margin-bottom: 10px">
     <form id="login" (ngSubmit)="onSubmit()">
         <div class="input-div">
-            <input id="username" name="username" type="text" placeholder="User Email" required [(ngModel)]="userEmail">
+            <input class="input-feild" id="username" name="username" type="text" placeholder="Email Id" required [(ngModel)]="userEmail">
             <!--  -->
         </div>
         <div class="input-div">
-            <input id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="password">
+            <input class="input-feild" id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="password">
             <!--  -->
         </div>
         <input id="button" type="submit" value="Login" />
 
     </form>
-    <p style="font-size: 'larger'">Not registered? </p>
-    <a id="link" (click)="navigateRegister()">Create a new account</a>
+    <div id="not-regi">
+    <h6> Not registered? <a id="link" (click)="navigateRegister()">Create a new account</a></h6>
+</div>
+<div id="error">
+<h6 *ngIf='error'> Invalid emailid or password</h6></div>
 </div>

@@ -8,17 +8,20 @@ import { IUser } from './IUser';
   providedIn: 'root'
 })
 export class UserService {
-  allUser:IUser[]=[]
+  allUser:IUser[]=[];
+  errormessage:string=""
   subject:Subject<IUser[]> = new Subject<IUser[]>();
-  getUser():void{
-    this.http.get<IUser>('https://parlezentreeapi.azurewebsites.net/api/Login')
+  getUser(email:string,password:string):void{
+    this.http.get<IUser[]>("https://parlezentreeapi.azurewebsites.net/api/Login?email="+ email +"&password="+password)
     .pipe(
-      catchError((e)=>{return throwError(e)})
+      catchError((e)=>{
+        this.errormessage="Invalid emailid or password";
+       return this.errormessage;
+      })
     )
     .subscribe((data)=>{
-      console.log(data);
-      console.log("true");
-      // this.allUser = data;
+    //  console.log(data);
+      this.allUser = data as IUser[];
       this.subject.next(this.allUser);
     })
   }
@@ -26,7 +29,6 @@ export class UserService {
     this.http.post<IUser>('https://parlezentreeapi.azurewebsites.net/api/User', JSON.stringify(user),
     { headers : {
       'Content-Type': 'application/json',
-      //'Authorization' :'Bearer ' + this.loginService.token
     }})
     .pipe(
       catchError((e) => {

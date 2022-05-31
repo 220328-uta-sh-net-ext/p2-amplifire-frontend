@@ -1,26 +1,27 @@
 <div id="main-register-box">
-    <img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="150">
-    <h2>Create Account</h2>
+    <img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="130" style="margin-bottom: 10px">
+    <h4>Create An Account</h4>
     <form id="Create">
         <div class="input-div">
-            <input id="firstname" name="firstname" type="text" placeholder="First Name" required [(ngModel)]="firstName">
+            <input class="input-feild" id="firstname" name="firstname" type="text" placeholder="First Name" required [(ngModel)]="firstName">
 
         </div>
-        <div class="input-div"><input id="lastname" name="lastname" type="text" placeholder="Last Name" required [(ngModel)]="lastName">
+        <div class="input-div"><input class="input-feild" id="lastname" name="lastname" type="text" placeholder="Last Name" required [(ngModel)]="lastName">
         </div>
-        <div class="input-div"><input id="username" name="username" type="text" placeholder="User Name" required [(ngModel)]="userName">
+        <div class="input-div"><input class="input-feild" id="username" name="username" type="text" placeholder="User Name" required [(ngModel)]="userName">
         </div>
-        <div class="input-div"><input id="Email" name="Email" type="email" placeholder="Email" required [(ngModel)]="emailId">
+        <div class="input-div"><input class="input-feild" id="Email" name="Email" type="email" placeholder="Email" required [(ngModel)]="emailId">
         </div>
-        <div class="input-div"><input id="contactnumber" name="contactnumber" type="phone" placeholder="(000)-000-0000" required [(ngModel)]="contactNo">
+        <div class="input-div"><input class="input-feild" id="contactnumber" name="contactnumber" type="phone" placeholder="(000)-000-0000" required [(ngModel)]="contactNo">
         </div>
-        <div class="input-div"><input id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="userPassword">
+        <div class="input-div"><input class="input-feild" id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="userPassword">
         </div>
-        <div class="input-div"><input id="passwordCheck" name="password" type="password" placeholder="Password" required>
+        <div class="input-div"><input class="input-feild" id="passwordCheck" name="password" type="password" placeholder="Password" required>
         </div>
         <input id="button" (click)="onSubmit()" type="submit" value="Create" />
 
     </form>
-    <p>Have an account? </p>
-    <a id="link" (click)="navigateLogin()">Login here!</a>
+    <div id="not-regi">
+    <h6>Have an account? 
+    <a id="link" (click)="navigateLogin()">Login here!</a></h6></div>
 </div>

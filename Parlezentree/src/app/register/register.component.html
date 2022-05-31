@@ -1,1 +1,26 @@
-<p>register works!</p>
+<div id="main-register-box">
+    <img src="https://i.postimg.cc/jj4Bzdh1/chefmain.png" alt="LOGO" height="150">
+    <h2>Create Account</h2>
+    <form id="Create">
+        <div class="input-div">
+            <input id="firstname" name="firstname" type="text" placeholder="First Name" required [(ngModel)]="firstName">
+
+        </div>
+        <div class="input-div"><input id="lastname" name="lastname" type="text" placeholder="Last Name" required [(ngModel)]="lastName">
+        </div>
+        <div class="input-div"><input id="username" name="username" type="text" placeholder="User Name" required [(ngModel)]="userName">
+        </div>
+        <div class="input-div"><input id="Email" name="Email" type="email" placeholder="Email" required [(ngModel)]="emailId">
+        </div>
+        <div class="input-div"><input id="contactnumber" name="contactnumber" type="phone" placeholder="(000)-000-0000" required [(ngModel)]="contactNo">
+        </div>
+        <div class="input-div"><input id="password" name="password" type="password" placeholder="Password" required [(ngModel)]="userPassword">
+        </div>
+        <div class="input-div"><input id="passwordCheck" name="password" type="password" placeholder="Password" required>
+        </div>
+        <input id="button" (click)="onSubmit()" type="submit" value="Create" />
+
+    </form>
+    <p>Have an account? </p>
+    <a id="link" (click)="navigateLogin()">Login here!</a>
+</div>

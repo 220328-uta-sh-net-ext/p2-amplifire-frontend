@@ -1,1 +1,28 @@
-<p>profile works!</p>
+<div class="container"> <!-- The input -->
+    <h1>Edit Profile</h1>
+    <form  id="form-id" >
+        <div class="componant-div">
+        <label class="container-label">First Name: </label>
+        <input class="text-input" id="firstName" type="text" name="firstName" placeholder="First name" required [(ngModel)] = "firstName"  />
+        </div>
+        <div class="componant-div">
+        <label class="container-label">Last Name: </label>
+        <input class="text-input" id="lastName" type="text" name="lastName" placeholder="Last name" required [(ngModel)] = "lastName"  />
+        </div>
+        <div class="componant-div">
+        <label class="container-label">Email id: </label>
+        <input class="text-input" id="emailid" type="text" name="emailid" placeholder="Email id" required [(ngModel)] = "email" disabled />
+        </div>
+        <div class="componant-div">
+        <label class="container-label">User Name: </label>
+        <input class="text-input" id="userName" type="text" name="userNamw" placeholder="User name" required [(ngModel)] = "userName"  />
+        </div>
+        <div class="componant-div">
+        <label class="container-label">Contact Number: </label>
+        <input class="text-input" id="contactNo" type="text" name="contactNo" placeholder="Contact Number" required [(ngModel)] = "contanctNo"  />
+        </div>
+        
+    </form>
+    <button class="btn" (click)="onSubmit()">Update</button> 
+   
+</div>

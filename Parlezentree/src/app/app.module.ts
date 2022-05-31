@@ -11,6 +11,8 @@ import { JokeComponent } from './joke/joke.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule, 
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

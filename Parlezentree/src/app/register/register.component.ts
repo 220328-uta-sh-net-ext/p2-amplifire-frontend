@@ -33,6 +33,7 @@ export class RegisterComponent implements OnInit {
     console.log(nUser);
     if(nUser.firstName!="" && nUser.lastName!="" && nUser.emailId!="" && nUser.contactNo!=0 && nUser.userName!="" && nUser.userPassword!=""){
     this.addUser(nUser);
+    this.router.navigate(['login']);
     }
     this.firstName = "";
     this.lastName = "";

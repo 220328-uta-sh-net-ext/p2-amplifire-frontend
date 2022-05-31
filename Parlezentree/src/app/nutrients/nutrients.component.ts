@@ -1,3 +1,4 @@
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NavbarService } from '../navbar.service';
@@ -8,6 +9,7 @@ import { NutrientsService } from '../nutrients.service';
   templateUrl: './nutrients.component.html',
   styleUrls: ['./nutrients.component.css']
 })
+
 export class NutrientsComponent implements OnInit {
 
 

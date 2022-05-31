@@ -12,16 +12,16 @@ import { SearchbyingredientsService } from "../searchbyingredients.service"
 
 export class IngredientsComponent implements OnInit {
   isLogin: string = "false";
-  ingrediants: string = "";
-  ingrediantsRecipe: Observable<any[]> = new Observable<any[]>();
+  ingredients: string = "";
+  ingredientsRecipe: Observable<any[]> = new Observable<any[]>();
   search(): void {
-    if (this.ingrediants == "") {
+    if (this.ingredients == "") {
       this.searchbyingredientsService.getIngredientRecipe("apple");
-      this.ingrediantsRecipe = this.searchbyingredientsService.subject;
+      this.ingredientsRecipe = this.searchbyingredientsService.subject;
 
     } else {
-      this.searchbyingredientsService.getIngredientRecipe(this.ingrediants);
-      this.ingrediantsRecipe = this.searchbyingredientsService.subject;
+      this.searchbyingredientsService.getIngredientRecipe(this.ingredients);
+      this.ingredientsRecipe = this.searchbyingredientsService.subject;
     }
   }
 
@@ -30,7 +30,7 @@ export class IngredientsComponent implements OnInit {
   ngOnInit(): void {
     this.nav.show();
     this.searchbyingredientsService.getIngredientRecipe("apple");
-    this.ingrediantsRecipe = this.searchbyingredientsService.subject;
+    this.ingredientsRecipe = this.searchbyingredientsService.subject;
     this.isLogin=localStorage.getItem("isLogin") || "false";
    
     if(this.isLogin == "true"){

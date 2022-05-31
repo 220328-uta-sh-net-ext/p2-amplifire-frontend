@@ -15,9 +15,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NutrientsComponent } from './nutrients/nutrients.component';
 
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { NutrientsComponent } from './nutrients/nutrients.component';
 
 @NgModule({
   declarations: [

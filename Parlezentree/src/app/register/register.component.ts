@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
   contactNo:number = 0;
 
   onSubmit():void{
+    
     const nUser:IUser = {
       firstName: this.firstName,
       lastName: this.lastName,
@@ -28,9 +29,11 @@ export class RegisterComponent implements OnInit {
       userPassword: this.userPassword,
       contactNo: this.contactNo
     }
+ 
     console.log(nUser);
+    if(nUser.firstName!="" && nUser.lastName!="" && nUser.emailId!="" && nUser.contactNo!=0 && nUser.userName!="" && nUser.userPassword!=""){
     this.addUser(nUser);
-
+    }
     this.firstName = "";
     this.lastName = "";
     this.userName = "";

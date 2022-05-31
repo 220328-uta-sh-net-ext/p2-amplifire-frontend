@@ -81,7 +81,7 @@ onSubmit(): void{
     this.isLogin=localStorage.getItem("isLogin") || "false";
    
     if(this.isLogin == "true"){
-      this.router.navigate(['home']);
+      this.router.navigate(['profile']);
     }else{
       this.router.navigate(['login']);
     }

@@ -34,7 +34,7 @@ export class IngredientsComponent implements OnInit {
     this.isLogin=localStorage.getItem("isLogin") || "false";
    
     if(this.isLogin == "true"){
-      this.router.navigate(['home']);
+      this.router.navigate(['ingredients']);
     }else{
       this.router.navigate(['login']);
     }

@@ -6,21 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JokeComponent = void 0;
+exports.NavbarService = void 0;
 const core_1 = require("@angular/core");
-let JokeComponent = class JokeComponent {
-    constructor(nav) {
-        this.nav = nav;
-    }
-    ngOnInit() {
-        this.nav.show();
-    }
+let NavbarService = class NavbarService {
+    constructor() { this.visible = false; }
+    hide() { this.visible = false; }
+    show() { this.visible = true; }
+    toggle() { this.visible = !this.visible; }
 };
-JokeComponent = __decorate([
-    (0, core_1.Component)({
-        selector: 'app-joke',
-        templateUrl: './joke.component.html',
-        styleUrls: ['./joke.component.css']
+NavbarService = __decorate([
+    (0, core_1.Injectable)({
+        providedIn: 'root'
     })
-], JokeComponent);
-exports.JokeComponent = JokeComponent;
+], NavbarService);
+exports.NavbarService = NavbarService;

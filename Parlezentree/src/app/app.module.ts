@@ -11,8 +11,10 @@ import { JokeComponent } from './joke/joke.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NutrientsComponent } from './nutrients/nutrients.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,14 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     JokeComponent,
     IngredientsComponent,
-    SearchRecipeComponent
+    SearchRecipeComponent,
+    NutrientsComponent
   ],
   imports: [
     BrowserModule, 
-    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

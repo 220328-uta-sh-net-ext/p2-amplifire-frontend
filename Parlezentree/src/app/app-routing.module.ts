@@ -8,6 +8,7 @@ import { IngredientsComponent } from "./ingredients/ingredients.component";
 import { SearchRecipeComponent } from "./search-recipe/search-recipe.component";
 import { JokeComponent } from "./joke/joke.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { NutrientsComponent } from "./nutrients/nutrients.component";
 
 const routes = [
     {path: '', redirectTo : '/login', pathMatch:'full'},
@@ -17,8 +18,8 @@ const routes = [
     {path: 'ingredients', component: IngredientsComponent},
     {path: 'search-recipe', component: SearchRecipeComponent},
     {path: 'joke', component: JokeComponent},
-    {path: 'profile', component: ProfileComponent}
-
+    {path: 'profile', component: ProfileComponent},
+    {path: 'nutrients', component: NutrientsComponent}
 ]
 
 //Start Building NgModule to create routing
